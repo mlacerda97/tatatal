@@ -1,0 +1,950 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    /* Para scrool suave */
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: top 0.5s;
+    width: 100vw;
+}
+
+.header {
+    padding-left: 90px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu ul,
+.menu li {
+    list-style: none;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.menu li a:hover {
+    border-bottom: 3px solid #fb6202;
+}
+
+.menu-btn img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+    filter: invert(100%)
+}
+
+.banner {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider--item {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.banner .slide {
+    display: inline-block;
+}
+
+.banner .slidearea {
+    display: flex;
+    flex-direction: column;
+    margin: -45% 230px;
+    color: white;
+    padding: 50px;
+}
+
+.slidearea h1 {
+    font-size: 120px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    background-color: transparent;
+}
+
+.slidearea h2 {
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    background-color: transparent;
+}
+
+.button--banner {
+    font-size: 15px;
+    width: 190px;
+    height: 80px;
+    color: white;
+    border: 2px solid white;
+    background-color: black;
+    padding: 20px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tab1 {
+    background-color: white;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.info {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+}
+
+.info--photo img {
+    width: 450px;
+    padding-right: 30px;
+}
+
+.msg--info {
+    width: 400px;
+}
+
+.title--info h3 {
+    color: #04a209;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+
+.title--info h1 {
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.button--about {
+    background-color: #25d366;
+    margin-top: 30px;
+    color: white;
+    border-radius: 50px;
+    width: 250px;
+    height: 40px;
+    border: 0px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.tab2 {
+    background-color: black;
+    height: 880px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tab2--1 h1 {
+    color: white;
+    text-align: center;
+    padding-top: 60px;
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: bold;
+}
+
+.tab2--1 h2,
+.tab3--1 h2,
+.tab4--1 h2 {
+    color: #fb6202;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.tab2--1 h2 span,
+.tab3--1 h2 span,
+.tab4--1 h2 span {
+    width: 70px;
+    border: 1px solid #fb6202;
+    display: inline-block;
+    margin-bottom: 4px;
+    margin-right: 17px;
+    margin-left: 8px;
+}
+
+.tab2--cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 65px;
+}
+
+.tab2--card1,
+.tab2--card2,
+.tab2--card3,
+.tab2--card4 {
+    width: 490px;
+    height: 250px;
+    background-color: white;
+    margin: 15px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.tab2--info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tab2--desc {
+    color: rgb(147, 147, 147);
+    line-height: 1.7;
+}
+
+.tab2--info img {
+    width: 60px;
+}
+
+.tab2--star {
+    width: 300px;
+    padding-left: 200px;
+}
+
+.tab2--name {
+    font-size: 15px;
+}
+
+.tab2--name span {
+    color: rgb(147, 147, 147);
+    font-size: 11px;
+}
+
+.tab3 {
+    background-color: white;
+    height: 900px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tab3--1 h1 {
+    color: black;
+    text-align: center;
+    padding-top: 60px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.tab3--cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.tab3--card1,
+.tab3--card2,
+.tab3--card3 {
+    width: 360px;
+    height: 600px;
+    background-color: rgb(249, 249, 249);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.tab3--card1,
+.tab3--card3 {
+    height: 500px;
+}
+
+.tab3--card2,
+.tab3--card3 {
+    margin-left: 35px;
+}
+
+.tab3--title {
+    color: #fb6202;
+    line-height: 1.6;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.tab3--title span {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.tab3--desc {
+    padding-top: 15px;
+    line-height: 2;
+}
+
+.tab3--desc span {
+    text-decoration: line-through
+}
+
+.tab3--button {
+    background-color: rgb(0, 0, 71);
+    color: white;
+    width: 200px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 40px;
+    border: 0px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.tab3--button:hover {
+    background-color: #fb6202;
+    color: white;
+}
+
+.tab3--card2 {
+    background-color: #fb6202;
+}
+
+.tab3--card2 .tab3--title {
+    color: white;
+    padding-top: 67px;
+}
+
+.tab3--card2 .tab3--desc {
+    color: white;
+}
+
+.tab3--card2 .tab3--button {
+    margin-top: 10px;
+}
+
+.tab3--card2 .tab3--button:hover {
+    background-color: white;
+    color: #fb6202;
+}
+
+.tab4 {
+    background-color: black;
+    height: 900px;
+    width: 100%;
+}
+
+.tab4--1 h1 {
+    color: white;
+    text-align: center;
+    padding-top: 60px;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.tab4--1 h2 {
+    padding-bottom: 20px;
+}
+
+.tab4--questions {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab4--question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab4--box {
+    background-color: white;
+    width: 684px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.tab4--seta img {
+    width: 20px;
+    display: flex;
+    align-items: center;
+    transform: rotate(-90deg);
+    transition: all 0.5 ease-in-out;
+}
+
+.tab4--content {
+    width: 684px;
+    color: white;
+    padding: 20px 20px 0px 20px;
+    text-align: justify;
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.active {
+    max-height: 300px;
+}
+
+.close {
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+}
+
+.open {
+    transition-duration: 0.5s;
+}
+
+footer {
+    height: 450px;
+    background-color: rgb(31, 31, 31);
+}
+
+.tab5 {
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+}
+
+.tab5--left,
+.tab5--center,
+.tab5--right {
+    width: 350px;
+}
+
+.tab5--center,
+.tab5--right {
+    margin-left: 20px;
+}
+
+.tab5--logo {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.tab5--title {
+    color: #fb6202;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.tab5--about {
+    color: rgb(238, 238, 238);
+    padding: 8px 0 8px 0;
+    text-align: justify;
+}
+
+.whatsapp img,
+.email img,
+.instagram img,
+.facebook img {
+    width: 20px;
+    height: 20px;
+    filter: invert(56%) sepia(52%) saturate(6412%) hue-rotate(3deg) brightness(100%) contrast(104%);
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.whatsapp a,
+.email a,
+.instagram a,
+.facebook a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.whatsapp span,
+.email span,
+.instagram span,
+.facebook span {
+    margin-top: 12px;
+    color: white;
+}
+
+.whatsapp a:hover span,
+.email a:hover span,
+.instagram a:hover span,
+.facebook a:hover span {
+    color: rgb(190, 188, 188);
+}
+
+.footer--copy {
+    width: 100%;
+    height: 50px;
+    background-color: #101010;
+    position: relative;
+    top: 52px;
+}
+
+.copy {
+    width: 1100px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    color: #878787;
+}
+
+.copy a {
+    margin: 4px;
+    color: white;
+}
+
+
+@media (max-width: 1340px) {
+    .banner .slidearea {
+        margin: -55% 100px;
+    }
+}
+
+@media (max-width: 1240px) {
+
+    .banner .slidearea {
+        margin: -55% 100px;
+    }
+
+    .banner {
+        height: 100vh;
+    }
+
+    .tab3--card1,
+    .tab3--card2,
+    .tab3--card3 {
+        width: 320px;
+    }
+
+    .tab5--left {
+        margin-left: 100px;
+    }
+
+    .copy {
+        margin-left: 50px;
+        width: 900px;
+    }
+}
+
+@media (max-width: 1160px) {
+
+    .banner .slidearea {
+        margin: -60% 140px;
+    }
+
+    .slidearea h1 {
+        font-size: 100px;
+    }
+
+    .banner {
+        height: 100vh;
+    }
+
+    .tab3--card1,
+    .tab3--card2,
+    .tab3--card3 {
+        width: 300px;
+    }
+
+    .tab3--card1,
+    .tab3--card3 {
+        height: 520px;
+    }
+
+    .tab5--left {
+        margin-left: 100px;
+    }
+
+    .copy {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .banner .slidearea {
+        margin: -70% 120px;
+    }
+    
+    .banner {
+        height: 100vh;
+    }
+
+    .menu li a {
+        padding: 0 25px 0 25px;
+    }
+
+    .button--banner {
+        font-size: 13px;
+        width: 150px;
+        height: 60px;
+    }
+
+    .tab2--card1,
+    .tab2--card2,
+    .tab2--card3,
+    .tab2--card4 {
+        width: 450px;
+        height: 230px;
+    }
+
+    .tab2--star {
+        padding-left: 190px;
+    }
+
+    .tab3--card1,
+    .tab3--card2,
+    .tab3--card3 {
+        width: 280px;
+    }
+
+    .tab3--card1,
+    .tab3--card3 {
+        height: 500px;
+    }
+
+    .tab3--card2 {
+        height: 580px;
+    }
+
+    .tab3--desc {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 950px) {
+    .banner .slidearea {
+        margin: -75% 100px;
+    }
+
+    .copy {
+        margin-left: 50px;
+        width: 700px;
+    }
+
+    .menu-btn img {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 48px;
+        left: -100vh;
+        background-color: rgb(51, 51, 51);
+        height: 46%;
+        width: 100%;
+        display: block;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul.open {
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .tab1 {
+        height: 530px;
+    }
+
+    .info {
+        padding-top: 50px;
+    }
+
+    .info--photo img {
+        width: 350px;
+        padding-right: 0px;
+    }
+
+    .msg--info {
+        width: 350px;
+    }
+
+    .tab2 {
+        height: 1180px;
+    }
+
+    .tab2--cards {
+        display: inline;
+    }
+
+    .tab3 {
+        height: 1710px;
+    }
+
+    .tab3--cards {
+        display: inline;
+    }
+
+    .tab3--card1,
+    .tab3--card2,
+    .tab3--card3 {
+        width: 100vw;
+        height: 500px;
+        border-radius: 0px;
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
+    .tab3--card2 .tab3--title {
+        padding-top: 20px;
+    }
+
+    .tab4--seta img {
+        position: static;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .banner .slidearea {
+        margin: -100% 100px;
+    }
+
+    .slidearea h1 {
+        font-size: 80px;
+    }
+
+    .menu {
+        margin-left: 300px;
+    }
+
+    .tab1 {
+        height: 800px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .tab2--card1,
+    .tab2--card2,
+    .tab2--card3,
+    .tab2--card4 {
+        width: 400px;
+        height: 230px;
+    }
+
+    .tab2--star {
+        padding-left: 140px;
+    }
+
+    .tab2--1 h2,
+    .tab3--1 h2,
+    .tab4--1 h2 {
+        padding-bottom: 15px;
+    }
+
+    .tab2--1 h2 span,
+    .tab3--1 h2 span,
+    .tab4--1 h2 span {
+        display: none;
+    }
+
+    .copy {
+        width: 350px;
+        font-size: 12px;
+    }
+
+    .tab4--box {
+        width: 404px;
+    }
+
+    .tab4--content {
+        width: 404px;
+    }
+
+    footer {
+        height: 550px;
+    }
+
+    .tab5 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab5--right {
+        display: none;
+    }
+
+    .tab5--left,
+    .tab5--center {
+        width: 330px;
+    }
+
+    .tab5--left,
+    .tab5--center {
+        margin-left: 40px;
+    }
+
+    .tab5--center .tab5--title {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .banner .slidearea {
+        margin: -125% 100px;
+    }
+
+    .slidearea h1 {
+        font-size: 60px;
+    }
+    .menu {
+        justify-content: space-around;
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 520px) {
+    .logo a {
+        font-size: 30px;
+    }
+
+    .menu {
+        justify-content: space-around;
+        margin-left: 130px;
+    }
+}
+
+@media (max-width: 425px) {
+    .banner .slidearea {
+        margin: -165% 50px;
+    }
+
+    .slidearea h1 {
+        font-size: 80px;
+    }
+
+    .logo a {
+        font-size: 25px;
+    }
+
+    .header {
+        padding-left: 60px;
+    }
+
+    .menu--opener {
+        margin-left: 170px;
+    }
+    
+    .slidearea h2 {
+        font-size: 20px;
+    }
+
+    .tab5--left,
+    .tab5--center {
+        width: 280px;
+    }
+
+    .copy {
+        width: 280px;
+        font-size: 10px;
+        margin-left: 20px;
+    }
+
+    .tab4--box {
+        width: 304px;
+    }
+
+    .tab4--content {
+        width: 304px;
+    }
+
+    .tab2--card1,
+    .tab2--card2,
+    .tab2--card3,
+    .tab2--card4 {
+        width: 310px;
+        height: 250px;
+    }
+
+    .tab2 {
+        height: 1280px;
+    }
+
+    .tab2--star {
+        padding-left: 60px;
+        font-size: 13px;
+    }
+
+    .info--photo img {
+        width: 320px;
+        padding-right: 0;
+    }
+    
+    .msg--info {
+        width: 300px;
+    }
+
+    .tab5--left,
+    .tab5--center {
+        width: 280px;
+        margin-left: 10px;
+    }
+}
